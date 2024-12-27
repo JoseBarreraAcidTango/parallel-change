@@ -5,16 +5,17 @@ class ShoppingCart:
         self.prices = []
 
     def add(self, price):
-        self.price = price
+        self.prices.append(price)
 
     def calculate_total_price(self):
-        return self.price
+        print("prices", self.prices)
+        return sum(self.prices)
 
     def has_discount(self):
-        return self.price >= 100
+        return sum(self.prices) >= 100
 
     def number_of_products(self):
-        return 1
+        return len(self.prices)
 
 
 class SomeConsumer():
